@@ -1,7 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://chlqm32ygjaun"]
+[gd_scene load_steps=9 format=3 uid="uid://chlqm32ygjaun"]
 
 [ext_resource type="PackedScene" uid="uid://bsn01rtw5uxs1" path="res://Main/Player/Player.tscn" id="1_w3tok"]
-[ext_resource type="PackedScene" uid="uid://cvbxx1qf0nyrs" path="res://PrivateDevRoom/VampireCharacter.tscn" id="2_e6sri"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mq2mt"]
 albedo_color = Color(1, 0.380392, 1, 1)
@@ -52,5 +51,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1.0801, -1.03186)
 
 [node name="Marker3D" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -7)
-
-[node name="VampireCharacter" parent="." instance=ExtResource("2_e6sri")]

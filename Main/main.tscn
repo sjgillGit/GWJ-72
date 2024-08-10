@@ -1,6 +1,17 @@
+<<<<<<< HEAD
 [gd_scene load_steps=6 format=3 uid="uid://chlqm32ygjaun"]
+=======
+[gd_scene load_steps=9 format=3 uid="uid://chlqm32ygjaun"]
+>>>>>>> AI
 
 [ext_resource type="PackedScene" uid="uid://bsn01rtw5uxs1" path="res://Main/Player/Player.tscn" id="1_w3tok"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mq2mt"]
+albedo_color = Color(1, 0.380392, 1, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_cn6cx"]
+lightmap_size_hint = Vector2i(17, 9)
+material = SubResource("StandardMaterial3D_mq2mt")
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_lqo7k"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -15,9 +26,26 @@ sky = SubResource("Sky_p84er")
 tonemap_mode = 2
 glow_enabled = true
 
+<<<<<<< HEAD
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_38uyf"]
+=======
+<<<<<<< HEAD
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xpad1"]
+albedo_color = Color(0, 0, 0.403922, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_dvvpo"]
+material = SubResource("StandardMaterial3D_xpad1")
+=======
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_38uyf"]
+>>>>>>> 3ddfdda7008191fd5bc1c1c9f786f83c181d7b7d
+>>>>>>> AI
 
 [node name="Main" type="Node3D"]
+
+[node name="Sphere" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21767, 1.66184, -3.36034)
+mesh = SubResource("SphereMesh_cn6cx")
+skeleton = NodePath("")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_6cujj")
@@ -32,4 +60,7 @@ use_collision = true
 material = SubResource("StandardMaterial3D_38uyf")
 
 [node name="Node3D" parent="." instance=ExtResource("1_w3tok")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1.0801, -1.03186)
+
+[node name="Marker3D" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -7)

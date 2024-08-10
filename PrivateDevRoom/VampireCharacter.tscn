@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://cvbxx1qf0nyrs"]
+
+[ext_resource type="Script" path="res://PrivateDevRoom/StateMachine.gd" id="1_7xwig"]
+[ext_resource type="Script" path="res://PrivateDevRoom/VampStalker.gd" id="2_ijsyx"]
+[ext_resource type="Script" path="res://PrivateDevRoom/VampHiding.gd" id="3_df7ee"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g6g3u"]
+albedo_color = Color(1, 0.0980392, 0.164706, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_oqvrb"]
+material = SubResource("StandardMaterial3D_g6g3u")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hy28d"]
+
+[node name="VampireCharacter" type="CharacterBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_oqvrb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_hy28d")
+
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("1_7xwig")
+initial_state = NodePath("VampStalker")
+
+[node name="VampStalker" type="Node" parent="StateMachine" node_paths=PackedStringArray("vampire")]
+script = ExtResource("2_ijsyx")
+vampire = NodePath("../..")
+
+[node name="VampHiding" type="Node" parent="StateMachine" node_paths=PackedStringArray("vampire")]
+script = ExtResource("3_df7ee")
+vampire = NodePath("../..")

@@ -22,11 +22,15 @@ sky = SubResource("Sky_p84er")
 tonemap_mode = 2
 glow_enabled = true
 
+<<<<<<< HEAD
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xpad1"]
 albedo_color = Color(0, 0, 0.403922, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_dvvpo"]
 material = SubResource("StandardMaterial3D_xpad1")
+=======
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_38uyf"]
+>>>>>>> 3ddfdda7008191fd5bc1c1c9f786f83c181d7b7d
 
 [node name="Main" type="Node3D"]
 
@@ -42,9 +46,10 @@ environment = SubResource("Environment_6cujj")
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
 shadow_enabled = true
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 20, 0, -1.52227, 0)
-mesh = SubResource("BoxMesh_dvvpo")
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 20, 0, -1.48223, 0)
+use_collision = true
+material = SubResource("StandardMaterial3D_38uyf")
 
 [node name="Node3D" parent="." instance=ExtResource("1_w3tok")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1.0801, -1.03186)

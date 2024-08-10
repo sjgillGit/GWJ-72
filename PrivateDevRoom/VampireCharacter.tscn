@@ -2,13 +2,16 @@
 
 [ext_resource type="Script" path="res://PrivateDevRoom/StateMachine.gd" id="1_7xwig"]
 [ext_resource type="Script" path="res://PrivateDevRoom/VampStalker.gd" id="2_ijsyx"]
-[ext_resource type="Script" path="res://PrivateDevRoom/VampHiding.gd" id="3_df7ee"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g6g3u"]
 albedo_color = Color(1, 0.0980392, 0.164706, 1)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_oqvrb"]
 material = SubResource("StandardMaterial3D_g6g3u")
+
+[sub_resource type="SphereMesh" id="SphereMesh_pqc5c"]
+radius = 0.2
+height = 0.2
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hy28d"]
 
@@ -17,6 +20,10 @@ material = SubResource("StandardMaterial3D_g6g3u")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_oqvrb")
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00551468, 0.403146, -0.370695)
+mesh = SubResource("SphereMesh_pqc5c")
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_hy28d")
 
@@ -24,10 +31,13 @@ shape = SubResource("CapsuleShape3D_hy28d")
 script = ExtResource("1_7xwig")
 initial_state = NodePath("VampStalker")
 
+[node name="Timer" type="Timer" parent="StateMachine"]
+process_callback = 0
+wait_time = 3.0
+autostart = true
+
 [node name="VampStalker" type="Node" parent="StateMachine" node_paths=PackedStringArray("vampire")]
 script = ExtResource("2_ijsyx")
 vampire = NodePath("../..")
 
-[node name="VampHiding" type="Node" parent="StateMachine" node_paths=PackedStringArray("vampire")]
-script = ExtResource("3_df7ee")
-vampire = NodePath("../..")
+[connection signal="timeout" from="StateMachine/Timer" to="StateMachine/VampStalker" method="_on_timer_timeout"]

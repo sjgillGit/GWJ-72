@@ -23,3 +23,5 @@ shape = SubResource("CapsuleShape3D_oxqfo")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
 mesh = SubResource("CapsuleMesh_6286r")
+
+[node name="Marker3D" type="Marker3D" parent="." groups=["targets"]]

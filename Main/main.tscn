@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://chlqm32ygjaun"]
+[gd_scene load_steps=9 format=3 uid="uid://chlqm32ygjaun"]
 
 [ext_resource type="PackedScene" uid="uid://bsn01rtw5uxs1" path="res://Main/Player/Player.tscn" id="1_w3tok"]
+[ext_resource type="PackedScene" uid="uid://cvbxx1qf0nyrs" path="res://PrivateDevRoom/VampireCharacter.tscn" id="2_eoly5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mq2mt"]
 albedo_color = Color(1, 0.380392, 1, 1)
@@ -26,6 +27,12 @@ glow_enabled = true
 
 [node name="Main" type="Node3D"]
 
+[node name="Marker3D2" type="Marker3D" parent="." groups=["targets"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 128.227, 0, 5.43027)
+
+[node name="Marker3D3" type="Marker3D" parent="Marker3D2" groups=["targets"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -132.606, 0, -12.3337)
+
 [node name="Sphere" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21767, 1.66184, -3.36034)
 mesh = SubResource("SphereMesh_cn6cx")
@@ -39,12 +46,13 @@ transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75
 shadow_enabled = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 20, 0, -1.48223, 0)
+transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 20, 66.6016, -1.48223, 0)
 use_collision = true
+size = Vector3(7.66016, 1, 1)
 material = SubResource("StandardMaterial3D_38uyf")
 
 [node name="Node3D" parent="." instance=ExtResource("1_w3tok")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1.0801, -1.03186)
 
-[node name="Marker3D" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -7)
+[node name="VampireCharacter" parent="." instance=ExtResource("2_eoly5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.12095, -6.35501)

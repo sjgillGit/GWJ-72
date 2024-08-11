@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://u1lkhxux627h"]
+[gd_scene load_steps=24 format=3 uid="uid://u1lkhxux627h"]
 
 [ext_resource type="PackedScene" uid="uid://cmriwrr1mv6k4" path="res://Assets/BasePlayArea/Breakroom 1.glb" id="1_e34kc"]
 [ext_resource type="Texture2D" uid="uid://5oimmee37325" path="res://Assets/BasePlayArea/Breakroom 1_wall 4.png" id="2_rnax7"]
@@ -54,6 +54,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_010vo")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_tmqph"]
+size = Vector3(42.7433, 2.58936, 41.6381)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q2fcc"]
+size = Vector3(2.00769, 41.6961, 42.3589)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_qq0nt"]
 size = Vector3(2.20801, 0.528198, 2.17847)
 
@@ -74,6 +80,32 @@ transform = Transform3D(0, 1, 0, 0, 0, -1, -1, 0, 0, -20.4378, 0, 0.126054)
 transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 20.7964, 0, 0.126054)
 mesh = SubResource("ArrayMesh_bgem0")
 skeleton = NodePath("")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="Map/Breakroom 1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Breakroom 1/RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.228128, -0.778076, -0.329896)
+shape = SubResource("BoxShape3D_tmqph")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="Map/Breakroom 1/RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.228128, 39.3736, -0.329896)
+shape = SubResource("BoxShape3D_tmqph")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Map/Breakroom 1/RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.9542, 20.348, 0.536377)
+shape = SubResource("BoxShape3D_q2fcc")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Map/Breakroom 1/RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.0593, 20.348, 0.536377)
+shape = SubResource("BoxShape3D_q2fcc")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Map/Breakroom 1/RigidBody3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.0882698, 20.348, 21.2989)
+shape = SubResource("BoxShape3D_q2fcc")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Map/Breakroom 1/RigidBody3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.0882698, 20.348, -20.8461)
+shape = SubResource("BoxShape3D_q2fcc")
 
 [node name="Bed" parent="Map" instance=ExtResource("3_727ti")]
 transform = Transform3D(0.22956, 0, 0, 0, 0.22956, 0, 0, 0, 0.22956, -0.635538, 0.0273904, -0.878794)

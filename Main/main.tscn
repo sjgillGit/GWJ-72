@@ -1,11 +1,6 @@
-<<<<<<< Updated upstream
 [gd_scene load_steps=6 format=3 uid="uid://chlqm32ygjaun"]
-=======
-[gd_scene load_steps=7 format=3 uid="uid://ddstceosmps01"]
->>>>>>> Stashed changes
 
 [ext_resource type="PackedScene" uid="uid://bsn01rtw5uxs1" path="res://Main/Player/Player.tscn" id="1_w3tok"]
-[ext_resource type="PackedScene" uid="uid://bs677vxjgnsla" path="res://Item.tscn" id="2_voj2q"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_lqo7k"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -38,6 +33,3 @@ material = SubResource("StandardMaterial3D_38uyf")
 
 [node name="Node3D" parent="." instance=ExtResource("1_w3tok")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -1)
-
-[node name="Node3D2" parent="." instance=ExtResource("2_voj2q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.08729, -0.512964, -5.09073)

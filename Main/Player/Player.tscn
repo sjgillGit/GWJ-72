@@ -11,11 +11,14 @@
 script = ExtResource("1_li4c4")
 
 [node name="Rootcamera" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
 script = ExtResource("2_wxosd")
 
 [node name="CameraVert" type="Node3D" parent="Rootcamera"]
 
-[node name="Camera3D" type="Camera3D" parent="Rootcamera/CameraVert"]
+[node name="CameraHoriz" type="Node3D" parent="Rootcamera/CameraVert"]
+
+[node name="Camera3D" type="Camera3D" parent="Rootcamera/CameraVert/CameraHoriz"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

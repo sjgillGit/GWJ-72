@@ -1,0 +1,56 @@
+[gd_scene load_steps=10 format=3 uid="uid://bx50haospu0tg"]
+
+[ext_resource type="Script" path="res://Scripts/pipe_puzzle.gd" id="1_kh74r"]
+[ext_resource type="PackedScene" uid="uid://val3nnyam1v1" path="res://Scenes/pipe_source.tscn" id="2_77qtk"]
+[ext_resource type="PackedScene" uid="uid://5w4pk0f10dhy" path="res://Scenes/pipe_l_2.tscn" id="3_y86ym"]
+[ext_resource type="PackedScene" uid="uid://b01njvehxp4i2" path="res://Scenes/pipe_hor.tscn" id="4_nkba6"]
+[ext_resource type="PackedScene" uid="uid://cjmsff36dk1ft" path="res://Scenes/pipe_vert.tscn" id="5_a8w86"]
+[ext_resource type="PackedScene" uid="uid://5reqvc7hdmmw" path="res://Scenes/pipe_l_4.tscn" id="6_u7uqd"]
+[ext_resource type="PackedScene" uid="uid://bg8b6oegyuxkb" path="res://Scenes/pipe_l_3.tscn" id="7_8p451"]
+[ext_resource type="PackedScene" uid="uid://b3m7c54omkufk" path="res://Scenes/pipe_l.tscn" id="8_nx0oc"]
+[ext_resource type="PackedScene" uid="uid://m88lww4ghhp2" path="res://Scenes/pipe_t.tscn" id="9_kxp0f"]
+
+[node name="PipePuzzle" type="Node2D"]
+script = ExtResource("1_kh74r")
+
+[node name="Pipe_source" parent="." instance=ExtResource("2_77qtk")]
+position = Vector2(0, 200)
+position_in_puzzle = [0, 2]
+
+[node name="Pipe_L2" parent="." instance=ExtResource("3_y86ym")]
+position = Vector2(100, 200)
+position_in_puzzle = [1, 2]
+
+[node name="PipeHor" parent="." instance=ExtResource("4_nkba6")]
+position = Vector2(300, 299)
+position_in_puzzle = [1, 1]
+
+[node name="PipeVert" parent="." instance=ExtResource("5_a8w86")]
+position = Vector2(100, 300)
+position_in_puzzle = [1, 3]
+
+[node name="Pipe_L4" parent="." instance=ExtResource("6_u7uqd")]
+position = Vector2(100, 400)
+position_in_puzzle = [1, 4]
+
+[node name="Pipe_L3" parent="." instance=ExtResource("7_8p451")]
+position = Vector2(200, 400)
+position_in_puzzle = [2, 4]
+
+[node name="PipeL" parent="." instance=ExtResource("8_nx0oc")]
+position = Vector2(200, 300)
+
+[node name="Pipe_L32" parent="." instance=ExtResource("7_8p451")]
+position = Vector2(402, 300)
+
+[node name="PipeVert3" parent="." instance=ExtResource("5_a8w86")]
+position = Vector2(389, -14)
+
+[node name="PipeVert4" parent="." instance=ExtResource("5_a8w86")]
+position = Vector2(398, 93)
+
+[node name="PipeT" parent="." instance=ExtResource("9_kxp0f")]
+position = Vector2(397, 200)
+
+[node name="PipeHor2" parent="." instance=ExtResource("4_nkba6")]
+position = Vector2(291, 198)

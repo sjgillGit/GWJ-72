@@ -18,21 +18,21 @@ func _ready():
 	pipes[1][2] = $Pipe_L2
 	pipes[1][3] = $PipeVert
 	pipes[1][4] = $Pipe_L4
-	pipes[2][4] = $Pipe_L3
 	pipes[2][3] = $PipeL
-	pipes[3][3] = $PipeHor
-	pipes[4][3] = $Pipe_L32
+	pipes[2][4] = $Pipe_L3
 	pipes[3][2] = $PipeHor2
-	pipes[4][1] = $PipeVert3
+	pipes[3][3] = $PipeHor
 	pipes[4][0] = $PipeVert4
+	pipes[4][1] = $PipeVert3
 	pipes[4][2] = $PipeT
+	pipes[4][3] = $Pipe_L32
 	###   Puzzle layout is here   ###
 	
 	for i in range(5): 
 		for j in range(5): 
 			if pipes[i][j] is Pipe:
-				pipes[i][j].position.x = i*100 + 100
-				pipes[i][j].position.y = j*100
+				pipes[i][j].position.x = i*100 + 300
+				pipes[i][j].position.y = j*100 + 300
 				pipes[i][j].position_in_puzzle[0] = i
 				pipes[i][j].position_in_puzzle[1] = j
 	

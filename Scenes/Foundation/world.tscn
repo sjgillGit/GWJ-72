@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://u1lkhxux627h"]
+[gd_scene load_steps=32 format=3 uid="uid://u1lkhxux627h"]
 
 [ext_resource type="PackedScene" uid="uid://cmriwrr1mv6k4" path="res://Assets/BasePlayArea/Breakroom 1.glb" id="1_e34kc"]
 [ext_resource type="Texture2D" uid="uid://5oimmee37325" path="res://Assets/BasePlayArea/Breakroom 1_wall 4.png" id="2_rnax7"]
@@ -13,9 +13,11 @@
 [ext_resource type="PackedScene" uid="uid://bo3t15md4lxus" path="res://Assets/BasePlayArea/Speaker.glb" id="11_240ow"]
 [ext_resource type="PackedScene" uid="uid://xnqh2ujy336t" path="res://Assets/BasePlayArea/Toilet.glb" id="12_85b5n"]
 [ext_resource type="PackedScene" uid="uid://b1le3chx108l2" path="res://Assets/BasePlayArea/Table 1.glb" id="13_e486s"]
+[ext_resource type="PackedScene" uid="uid://ciitomasjjki0" path="res://Assets/Puzzles/Pipes/Pipe 1.glb" id="13_tie5x"]
 [ext_resource type="PackedScene" uid="uid://bdoiteohp6lmx" path="res://Assets/BasePlayArea/Shelf 1.glb" id="14_e32rc"]
 [ext_resource type="PackedScene" uid="uid://dvi6m15kjstib" path="res://Assets/BasePlayArea/Vent.glb" id="14_vs4j1"]
 [ext_resource type="PackedScene" uid="uid://c25j2v5vc1juo" path="res://Assets/BasePlayArea/Trash can.glb" id="16_hutgf"]
+[ext_resource type="PackedScene" uid="uid://nm8xgbrhu6h0" path="res://Assets/Puzzles/Tablet.glb" id="18_kdjmy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ch621"]
 resource_name = "Material.004"
@@ -63,8 +65,24 @@ size = Vector3(2.00769, 41.6961, 42.3589)
 [sub_resource type="BoxShape3D" id="BoxShape3D_qq0nt"]
 size = Vector3(2.20801, 0.528198, 2.17847)
 
+[sub_resource type="BoxMesh" id="BoxMesh_e1ul6"]
+
+[sub_resource type="Skin" id="Skin_0pmh7"]
+
 [sub_resource type="Environment" id="Environment_jdwfg"]
 background_mode = 1
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_6qw25"]
+viewport_path = NodePath("Tablet/SubViewportContainer/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_icid6"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_6qw25")
+
+[sub_resource type="BoxMesh" id="BoxMesh_imqko"]
+material = SubResource("StandardMaterial3D_icid6")
+
+[sub_resource type="Skin" id="Skin_yr2xn"]
 
 [node name="World" type="Node"]
 
@@ -152,6 +170,91 @@ transform = Transform3D(0.136072, 0, 0, 0, 0.136072, 0, 0, 0, 0.136072, -0.76534
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0512695, -0.235901, 0.0291748)
 shape = SubResource("BoxShape3D_qq0nt")
 
+[node name="Node3D" type="Node3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.03302, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Node3D"]
+transform = Transform3D(-4.25756e-09, 0, 0.853675, 0, 0.853675, 0, -0.0974017, 0, -3.73153e-08, 0.0191545, 0, 0.423372)
+mesh = SubResource("BoxMesh_e1ul6")
+skin = SubResource("Skin_0pmh7")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Map/Node3D"]
+transform = Transform3D(-4.25756e-09, 0, 0.853675, 0, 0.853675, 0, -0.0974017, 0, -3.73153e-08, 0.0191545, 0, -0.425464)
+mesh = SubResource("BoxMesh_e1ul6")
+skin = SubResource("Skin_0pmh7")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Map/Node3D"]
+transform = Transform3D(-4.25756e-09, -0.853675, 0, 0.0974017, -3.73153e-08, 0, 0, 0, 0.853675, 0.0191545, -0.432089, 0.00555152)
+mesh = SubResource("BoxMesh_e1ul6")
+skin = SubResource("Skin_0pmh7")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Map/Node3D"]
+transform = Transform3D(-4.25756e-09, -0.853675, 0, 0.0974017, -3.73153e-08, 0, 0, 0, 0.853675, 0.0191545, 0.38057, 0.00555152)
+mesh = SubResource("BoxMesh_e1ul6")
+skin = SubResource("Skin_0pmh7")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Map/Node3D"]
+transform = Transform3D(0.0974017, 0, 0, 0, 0.853675, 0, 0, 0, 0.853675, 0.459441, 0, 0.00555152)
+mesh = SubResource("BoxMesh_e1ul6")
+skin = SubResource("Skin_0pmh7")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Map/Node3D"]
+transform = Transform3D(0.0974017, 0, 0, 0, 0.853675, 0, 0, 0, 0.853675, -0.360639, 0, 0.00555152)
+mesh = SubResource("BoxMesh_e1ul6")
+skin = SubResource("Skin_0pmh7")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Map/Node3D"]
+light_color = Color(3.85046e-07, 0.190777, 0.190777, 1)
+light_bake_mode = 1
+
+[node name="Pipe 1" parent="Map/Node3D" instance=ExtResource("13_tie5x")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.033021, 0, -0.350718)
+
+[node name="Pipe 2" parent="Map/Node3D" instance=ExtResource("13_tie5x")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.215065, 0, -0.350718)
+
+[node name="Pipe 3" parent="Map/Node3D" instance=ExtResource("13_tie5x")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.150981, 0, -0.350718)
+
+[node name="Pipe 4" parent="Map/Node3D" instance=ExtResource("13_tie5x")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.333697, 0, -0.350718)
+
+[node name="Pipe 13" parent="Map/Node3D" instance=ExtResource("13_tie5x")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.320805, -0.166664, -0.350718)
+
+[node name="Pipe 14" parent="Map/Node3D" instance=ExtResource("13_tie5x")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.143963, -0.166664, -0.350718)
+
+[node name="Pipe 15" parent="Map/Node3D" instance=ExtResource("13_tie5x")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.0336308, -0.166664, -0.350718)
+
+[node name="Pipe 16" parent="Map/Node3D" instance=ExtResource("13_tie5x")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.212836, -0.166664, -0.350718)
+
+[node name="Pipe 5" parent="Map/Node3D" instance=ExtResource("13_tie5x")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.333697, 0.143518, -0.350718)
+
+[node name="Pipe 9" parent="Map/Node3D" instance=ExtResource("13_tie5x")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.333697, 0.271756, -0.350718)
+
+[node name="Pipe 10" parent="Map/Node3D" instance=ExtResource("13_tie5x")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.154337, 0.271756, -0.350718)
+
+[node name="Pipe 11" parent="Map/Node3D" instance=ExtResource("13_tie5x")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.0387869, 0.271756, -0.350718)
+
+[node name="Pipe 12" parent="Map/Node3D" instance=ExtResource("13_tie5x")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.227207, 0.271756, -0.350718)
+
+[node name="Pipe 6" parent="Map/Node3D" instance=ExtResource("13_tie5x")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.144845, 0.143518, -0.350718)
+
+[node name="Pipe 7" parent="Map/Node3D" instance=ExtResource("13_tie5x")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.0370641, 0.143518, -0.350718)
+
+[node name="Pipe 8" parent="Map/Node3D" instance=ExtResource("13_tie5x")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.212212, 0.143518, -0.350718)
+
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.06945, 0)
 omni_range = 1.92023
@@ -171,10 +274,33 @@ transform = Transform3D(0.14, 0, 0, 0, 0.14, 0, 0, 0, 0.14, 0.321, 0.369, -0.955
 [node name="Speaker" parent="." instance=ExtResource("11_240ow")]
 transform = Transform3D(-0.199977, 0.174984, 0.0850336, 0.0506199, 0.164543, -0.219555, -0.18785, -0.141941, -0.149686, -0.947, 0.703, 0.937)
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Speaker"]
+
 [node name="Sofa" parent="." instance=ExtResource("9_oox6s")]
 transform = Transform3D(-0.234291, 0, -0.0283523, 0, 0.236, 0, 0.0283523, 0, -0.234291, -0.17, 0.028, 0.86)
 
 [node name="Trash can" parent="." instance=ExtResource("16_hutgf")]
 transform = Transform3D(-0.116518, 0, 0.010604, 0, 0.117, 0, -0.010604, 0, -0.116518, 0.923, 0.036, 0.848)
+
+[node name="Tablet" parent="." instance=ExtResource("18_kdjmy")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.0269772, 0.175256, 0.0865614)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Tablet"]
+offset_right = 481.0
+offset_bottom = 446.0
+
+[node name="SubViewport" type="SubViewport" parent="Tablet/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(512, 1024)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="Tablet/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.03302, 0, 0.245176)
+fov = 78.0621
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tablet"]
+transform = Transform3D(0.726724, 0, 0, 0, 0.00940384, 0, 0, 0, 0.612677, 0, 0, 0)
+mesh = SubResource("BoxMesh_imqko")
+skin = SubResource("Skin_yr2xn")
 
 [editable path="Map/Breakroom 1"]

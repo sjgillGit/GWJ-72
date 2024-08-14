@@ -22,7 +22,7 @@ position = Vector2(100, 200)
 position_in_puzzle = [1, 2]
 
 [node name="PipeHor" parent="." instance=ExtResource("4_nkba6")]
-position = Vector2(300, 299)
+position = Vector2(300, 300)
 position_in_puzzle = [1, 1]
 
 [node name="PipeVert" parent="." instance=ExtResource("5_a8w86")]
@@ -41,16 +41,41 @@ position_in_puzzle = [2, 4]
 position = Vector2(200, 300)
 
 [node name="Pipe_L32" parent="." instance=ExtResource("7_8p451")]
-position = Vector2(402, 300)
+position = Vector2(400, 300)
 
 [node name="PipeVert3" parent="." instance=ExtResource("5_a8w86")]
-position = Vector2(389, -14)
+position = Vector2(400, 0)
 
 [node name="PipeVert4" parent="." instance=ExtResource("5_a8w86")]
-position = Vector2(398, 93)
+position = Vector2(400, 100)
 
 [node name="PipeT" parent="." instance=ExtResource("9_kxp0f")]
-position = Vector2(397, 200)
+position = Vector2(400, 200)
 
 [node name="PipeHor2" parent="." instance=ExtResource("4_nkba6")]
-position = Vector2(291, 198)
+position = Vector2(300, 200)
+
+[node name="Up3" type="Button" parent="."]
+offset_left = 550.0
+offset_top = 100.0
+offset_right = 650.0
+offset_bottom = 200.0
+text = "Up"
+
+[node name="Up2" type="Button" parent="."]
+offset_left = 450.0
+offset_top = 100.0
+offset_right = 550.0
+offset_bottom = 200.0
+text = "Up"
+
+[node name="Up1" type="Button" parent="."]
+offset_left = 350.0
+offset_top = 100.0
+offset_right = 450.0
+offset_bottom = 200.0
+text = "Up"
+
+[connection signal="pressed" from="Up3" to="." method="shift_up" binds= [3]]
+[connection signal="pressed" from="Up2" to="." method="shift_up" binds= [2]]
+[connection signal="pressed" from="Up1" to="." method="shift_up" binds= [1]]

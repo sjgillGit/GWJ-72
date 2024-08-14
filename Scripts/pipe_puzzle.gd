@@ -92,6 +92,7 @@ func deactivate(position_in_puzzle, direction):
 
 
 func shift_up(column : int):
+	# Ugly, fix that shit later
 	pipes[0][2].deactivate('left')
 	var pipes_moved = pipes[column]
 	var top_pipe = pipes_moved[0]
@@ -119,6 +120,21 @@ func shift_up(column : int):
 	if pipes_moved[4] is Pipe: 
 		pipes_moved[4].position_in_puzzle[1] = 4
 		pipes_moved[4].position.y = 4*100 + 300
+	
+	pipes[column] = pipes_moved
+	pipes[0][2].activate('left')
+
+func shift_down(column : int):
+	pipes[0][2].deactivate('left')
+	
+	var pipes_moved = pipes[column]
+	var back = pipes_moved.pop_back()
+	pipes_moved.push_front(back)
+	
+	for i in range(5):
+		if pipes_moved[i] is Pipe:
+			pipes_moved[i].position_in_puzzle[1] = i
+			pipes_moved[i].position.y = i*100 + 300
 	
 	pipes[column] = pipes_moved
 	pipes[0][2].activate('left')

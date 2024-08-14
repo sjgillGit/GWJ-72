@@ -89,3 +89,36 @@ func deactivate(position_in_puzzle, direction):
 			return
 		if pipes[position_in_puzzle[0]-1][position_in_puzzle[1]] is Pipe:
 			pipes[position_in_puzzle[0]-1][position_in_puzzle[1]].deactivate('right')
+
+
+func shift_up(column : int):
+	pipes[0][2].deactivate('left')
+	var pipes_moved = pipes[column]
+	var top_pipe = pipes_moved[0]
+	pipes_moved[0] = pipes_moved[1]
+	if pipes_moved[0] is Pipe: 
+		pipes_moved[0].position_in_puzzle[1] = 0
+		pipes_moved[0].position.y = 300
+	
+	pipes_moved[1] = pipes_moved[2]
+	if pipes_moved[1] is Pipe: 
+		pipes_moved[1].position_in_puzzle[1] = 1
+		pipes_moved[1].position.y = 100 + 300
+	
+	pipes_moved[2] = pipes_moved[3]
+	if pipes_moved[2] is Pipe: 
+		pipes_moved[2].position_in_puzzle[1] = 2
+		pipes_moved[2].position.y = 2*100 + 300
+	
+	pipes_moved[3] = pipes_moved[4]
+	if pipes_moved[3] is Pipe: 
+		pipes_moved[3].position_in_puzzle[1] = 3
+		pipes_moved[3].position.y = 3*100 + 300
+	
+	pipes_moved[4] = top_pipe
+	if pipes_moved[4] is Pipe: 
+		pipes_moved[4].position_in_puzzle[1] = 4
+		pipes_moved[4].position.y = 4*100 + 300
+	
+	pipes[column] = pipes_moved
+	pipes[0][2].activate('left')

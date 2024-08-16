@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4y4kphvmwrtc"
-path.s3tc="res://.godot/imported/Speaker_speaker.png-60155248d90a74915f5023666a571b70.s3tc.ctex"
+uid="uid://45x7lsljdrv5"
+path.s3tc="res://.godot/imported/Mirror_mirror 1.png-a3565dc5303d7f3c048c179d9457e8d5.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "d7a22754e444f87ed9b3a9cce6b7c0e1"
+"md5": "a94caca6353680be6fb4a0d792fcbe09"
 }
 
 [deps]
 
-source_file="res://Assets/BasePlayArea/Speaker_speaker.png"
-dest_files=["res://.godot/imported/Speaker_speaker.png-60155248d90a74915f5023666a571b70.s3tc.ctex"]
+source_file="res://Assets/Extra Decorations/Mirror_mirror 1.png"
+dest_files=["res://.godot/imported/Mirror_mirror 1.png-a3565dc5303d7f3c048c179d9457e8d5.s3tc.ctex"]
 
 [params]
 

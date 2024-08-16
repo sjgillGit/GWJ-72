@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4y4kphvmwrtc"
-path.s3tc="res://.godot/imported/Speaker_speaker.png-60155248d90a74915f5023666a571b70.s3tc.ctex"
+uid="uid://b50fieov0gpo3"
+path.s3tc="res://.godot/imported/Food plate_slop.png-91f0fc4c40d3de525278369251416e7c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "d7a22754e444f87ed9b3a9cce6b7c0e1"
+"md5": "bae4163d7ff6d8e833899b92b8fa3984"
 }
 
 [deps]
 
-source_file="res://Assets/BasePlayArea/Speaker_speaker.png"
-dest_files=["res://.godot/imported/Speaker_speaker.png-60155248d90a74915f5023666a571b70.s3tc.ctex"]
+source_file="res://Assets/Extra Decorations/Food plate_slop.png"
+dest_files=["res://.godot/imported/Food plate_slop.png-91f0fc4c40d3de525278369251416e7c.s3tc.ctex"]
 
 [params]
 

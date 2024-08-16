@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://br1re33pq3yjw"
-path="res://.godot/imported/Speaker.glb-ae9d951124a300a788fe915670ed02ed.scn"
+uid="uid://nm8xgbrhu6h0"
+path="res://.godot/imported/Tablet.glb-939e92e244300a5fc467a1dcf7c03a0b.scn"
 
 [deps]
 
-source_file="res://Assets/BasePlayArea/Speaker.glb"
-dest_files=["res://.godot/imported/Speaker.glb-ae9d951124a300a788fe915670ed02ed.scn"]
+source_file="res://Assets/Puzzles/Tablet.glb"
+dest_files=["res://.godot/imported/Tablet.glb-939e92e244300a5fc467a1dcf7c03a0b.scn"]
 
 [params]
 

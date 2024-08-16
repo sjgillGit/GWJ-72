@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://br1re33pq3yjw"
-path="res://.godot/imported/Speaker.glb-ae9d951124a300a788fe915670ed02ed.scn"
+uid="uid://c2gkt7qftgex8"
+path="res://.godot/imported/Food plate.glb-37055c704d655a3b4feeb3c4947028d9.scn"
 
 [deps]
 
-source_file="res://Assets/BasePlayArea/Speaker.glb"
-dest_files=["res://.godot/imported/Speaker.glb-ae9d951124a300a788fe915670ed02ed.scn"]
+source_file="res://Assets/Extra Decorations/Food plate.glb"
+dest_files=["res://.godot/imported/Food plate.glb-37055c704d655a3b4feeb3c4947028d9.scn"]
 
 [params]
 

@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3m7c54omkufk"]
+
+[ext_resource type="Script" path="res://Scripts/PipeL.gd" id="1_bbp64"]
+[ext_resource type="Texture2D" uid="uid://brhtn3fjjad6f" path="res://Assets/PipePuzzle/pipe_L.png" id="2_h53n0"]
+[ext_resource type="Texture2D" uid="uid://cejuxlcnq335s" path="res://Assets/PipePuzzle/pipe_L_active.png" id="3_fq60x"]
+
+[node name="PipeL" type="Node2D"]
+script = ExtResource("1_bbp64")
+
+[node name="Off" type="Sprite2D" parent="."]
+texture = ExtResource("2_h53n0")
+
+[node name="On" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_fq60x")

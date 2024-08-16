@@ -1099,5 +1099,11 @@ transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.0867006, 0.17318, 0.
 [node name="Paper 3" parent="." instance=ExtResource("25_swemn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00961639, 0.229464, 0.194533)
 
+[node name="Sofa" parent="." instance=ExtResource("9_oox6s")]
+transform = Transform3D(-0.234291, 0, -0.0283523, 0, 0.236, 0, 0.0283523, 0, -0.234291, -0.17, 0.028, 0.86)
+
+[node name="Trash can" parent="." instance=ExtResource("16_hutgf")]
+transform = Transform3D(-0.116518, 0, 0.010604, 0, 0.117, 0, -0.010604, 0, -0.116518, 0.923, 0.036, 0.848)
+
 [editable path="Map/Breakroom 1"]
 [editable path="Breaker"]

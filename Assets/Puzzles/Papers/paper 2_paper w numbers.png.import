@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4y4kphvmwrtc"
-path.s3tc="res://.godot/imported/Speaker_speaker.png-60155248d90a74915f5023666a571b70.s3tc.ctex"
+uid="uid://d2b1j86cjuwpo"
+path.s3tc="res://.godot/imported/paper 2_paper w numbers.png-1c3a5196e647462030ba925b07d5e1af.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "d7a22754e444f87ed9b3a9cce6b7c0e1"
+"md5": "e0fa62336ae5ce5b476af8b7a6aa9a45"
 }
 
 [deps]
 
-source_file="res://Assets/BasePlayArea/Speaker_speaker.png"
-dest_files=["res://.godot/imported/Speaker_speaker.png-60155248d90a74915f5023666a571b70.s3tc.ctex"]
+source_file="res://Assets/Puzzles/Papers/paper 2_paper w numbers.png"
+dest_files=["res://.godot/imported/paper 2_paper w numbers.png-1c3a5196e647462030ba925b07d5e1af.s3tc.ctex"]
 
 [params]
 

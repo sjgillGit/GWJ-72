@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://br1re33pq3yjw"
-path="res://.godot/imported/Speaker.glb-ae9d951124a300a788fe915670ed02ed.scn"
+uid="uid://cfemvgty5lh0v"
+path="res://.godot/imported/Breaker.glb-d7296c2181d32e8df3d4ba2ffc627697.scn"
 
 [deps]
 
-source_file="res://Assets/BasePlayArea/Speaker.glb"
-dest_files=["res://.godot/imported/Speaker.glb-ae9d951124a300a788fe915670ed02ed.scn"]
+source_file="res://Assets/Puzzles/Circuit Breaker/Breaker.glb"
+dest_files=["res://.godot/imported/Breaker.glb-d7296c2181d32e8df3d4ba2ffc627697.scn"]
 
 [params]
 

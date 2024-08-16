@@ -55,6 +55,17 @@ position = Vector2(400, 200)
 [node name="PipeHor2" parent="." instance=ExtResource("4_nkba6")]
 position = Vector2(300, 200)
 
+[node name="PipeT2" parent="." instance=ExtResource("9_kxp0f")]
+position = Vector2(99, 98)
+
+[node name="PipeHor3" parent="." instance=ExtResource("4_nkba6")]
+
+[node name="PipeL2" parent="." instance=ExtResource("8_nx0oc")]
+
+[node name="Pipe_L5" parent="." instance=ExtResource("6_u7uqd")]
+
+[node name="PipeT3" parent="." instance=ExtResource("9_kxp0f")]
+
 [node name="Up4" type="Button" parent="."]
 offset_left = 550.0
 offset_top = 100.0
@@ -85,30 +96,30 @@ text = "Up"
 
 [node name="Down1" type="Button" parent="."]
 offset_left = 350.0
-offset_top = 750.0
+offset_top = 770.0
 offset_right = 450.0
-offset_bottom = 850.0
+offset_bottom = 870.0
 text = "Up"
 
 [node name="Down2" type="Button" parent="."]
 offset_left = 450.0
-offset_top = 750.0
+offset_top = 770.0
 offset_right = 550.0
-offset_bottom = 850.0
+offset_bottom = 870.0
 text = "Up"
 
 [node name="Down3" type="Button" parent="."]
 offset_left = 550.0
-offset_top = 750.0
+offset_top = 770.0
 offset_right = 650.0
-offset_bottom = 850.0
+offset_bottom = 870.0
 text = "Up"
 
 [node name="Down4" type="Button" parent="."]
 offset_left = 650.0
-offset_top = 750.0
+offset_top = 770.0
 offset_right = 750.0
-offset_bottom = 850.0
+offset_bottom = 870.0
 text = "Up"
 
 [connection signal="pressed" from="Up4" to="." method="shift_up" binds= [3]]

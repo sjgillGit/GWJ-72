@@ -15,17 +15,22 @@ func _ready():
 	
 	###   Puzzle layout is here   ###
 	pipes[0][2] = $Pipe_source
+	pipes[1][0] = $PipeHor3
+	pipes[1][1] = $PipeT2
 	pipes[1][2] = $Pipe_L2
 	pipes[1][3] = $PipeVert
 	pipes[1][4] = $Pipe_L4
 	pipes[2][3] = $PipeL
 	pipes[2][4] = $Pipe_L3
+	pipes[3][0] = $Pipe_L5
 	pipes[3][2] = $PipeHor2
 	pipes[3][3] = $PipeHor
+	pipes[3][4] = $PipeL2
 	pipes[4][0] = $PipeVert4
 	pipes[4][1] = $PipeVert3
 	pipes[4][2] = $PipeT
 	pipes[4][3] = $Pipe_L32
+	pipes[4][4] = $PipeT3
 	###   Puzzle layout is here   ###
 	
 	for i in range(5): 

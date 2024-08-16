@@ -23,7 +23,7 @@ func _on_start_game_pressed():
 	if started:
 		visible = false
 		return
-	var scene = preload("res://Main/main.tscn")
+	var scene = preload('res://Main/main.tscn')
 	var instance = scene.instantiate()
 	add_child(instance)
 	visible = false

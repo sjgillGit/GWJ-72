@@ -74,15 +74,6 @@ step = 0.05
 value = 1.0
 script = ExtResource("2_bhnht")
 
-[node name="Sens" type="HSlider" parent="."]
-offset_left = 1100.0
-offset_top = 450.0
-offset_right = 1560.0
-offset_bottom = 466.0
-max_value = 1.0
-step = 0.05
-script = ExtResource("2_bhnht")
-
 [node name="VolumeLabel" type="Label" parent="."]
 offset_left = 1116.0
 offset_top = 166.0
@@ -92,12 +83,23 @@ theme = SubResource("Theme_osyp5")
 text = "Volume:"
 
 [node name="MouseLabel" type="Label" parent="."]
+visible = false
 offset_left = 1120.0
 offset_top = 348.0
 offset_right = 1554.0
 offset_bottom = 417.0
 theme = SubResource("Theme_osyp5")
 text = "Mouse sensitivity:"
+
+[node name="Sens" type="HSlider" parent="."]
+visible = false
+offset_left = 1100.0
+offset_top = 450.0
+offset_right = 1560.0
+offset_bottom = 466.0
+max_value = 1.0
+step = 0.05
+script = ExtResource("2_bhnht")
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_tw70m")

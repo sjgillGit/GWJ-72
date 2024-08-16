@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4y4kphvmwrtc"
-path.s3tc="res://.godot/imported/Speaker_speaker.png-60155248d90a74915f5023666a571b70.s3tc.ctex"
+uid="uid://dwmuocfcol7hw"
+path.s3tc="res://.godot/imported/Kanji paper_Kanji paper 1.png-1aa88e83d39797098c4a0907343208da.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "d7a22754e444f87ed9b3a9cce6b7c0e1"
+"md5": "46d33f09e1eae6d6d11b165c63e25472"
 }
 
 [deps]
 
-source_file="res://Assets/BasePlayArea/Speaker_speaker.png"
-dest_files=["res://.godot/imported/Speaker_speaker.png-60155248d90a74915f5023666a571b70.s3tc.ctex"]
+source_file="res://Assets/Puzzles/Papers/Kanji paper_Kanji paper 1.png"
+dest_files=["res://.godot/imported/Kanji paper_Kanji paper 1.png-1aa88e83d39797098c4a0907343208da.s3tc.ctex"]
 
 [params]
 

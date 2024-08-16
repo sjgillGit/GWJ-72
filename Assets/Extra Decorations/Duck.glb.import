@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://br1re33pq3yjw"
-path="res://.godot/imported/Speaker.glb-ae9d951124a300a788fe915670ed02ed.scn"
+uid="uid://cugbqplwmcaox"
+path="res://.godot/imported/Duck.glb-8081352805a4703ec71ac4fcc1ce019b.scn"
 
 [deps]
 
-source_file="res://Assets/BasePlayArea/Speaker.glb"
-dest_files=["res://.godot/imported/Speaker.glb-ae9d951124a300a788fe915670ed02ed.scn"]
+source_file="res://Assets/Extra Decorations/Duck.glb"
+dest_files=["res://.godot/imported/Duck.glb-8081352805a4703ec71ac4fcc1ce019b.scn"]
 
 [params]
 

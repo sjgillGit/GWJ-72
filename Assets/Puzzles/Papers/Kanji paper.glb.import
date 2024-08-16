@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://br1re33pq3yjw"
-path="res://.godot/imported/Speaker.glb-ae9d951124a300a788fe915670ed02ed.scn"
+uid="uid://dmr2skmjgb5ji"
+path="res://.godot/imported/Kanji paper.glb-7d68ece8cc2d6b32341fe42efe161ec7.scn"
 
 [deps]
 
-source_file="res://Assets/BasePlayArea/Speaker.glb"
-dest_files=["res://.godot/imported/Speaker.glb-ae9d951124a300a788fe915670ed02ed.scn"]
+source_file="res://Assets/Puzzles/Papers/Kanji paper.glb"
+dest_files=["res://.godot/imported/Kanji paper.glb-7d68ece8cc2d6b32341fe42efe161ec7.scn"]
 
 [params]
 

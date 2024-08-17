@@ -1,11 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://bvb3a0gsdrxfd"]
+[gd_scene load_steps=5 format=3 uid="uid://bvb3a0gsdrxfd"]
 
 [ext_resource type="Texture2D" uid="uid://bc23r5vw86ib8" path="res://icon.svg" id="1_cgacw"]
+[ext_resource type="Script" path="res://Interactable.gd" id="1_mf54d"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sesta"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6y66p"]
 albedo_texture = ExtResource("1_cgacw")
 
-[node name="Node3D" type="Node3D"]
+[node name="Item" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+script = ExtResource("1_mf54d")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_sesta")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 material_override = SubResource("StandardMaterial3D_6y66p")

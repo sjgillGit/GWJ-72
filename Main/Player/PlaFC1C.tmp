@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bsn01rtw5uxs1"]
+[gd_scene load_steps=5 format=3 uid="uid://bsn01rtw5uxs1"]
 
 [ext_resource type="Script" path="res://Main/Player/CharacterBody3D.gd" id="1_li4c4"]
 [ext_resource type="Script" path="res://Main/Player/Rootcamera.gd" id="2_wxosd"]
-[ext_resource type="PackedScene" uid="uid://k3h4a5xg7rxe" path="res://InteractRay.tscn" id="3_jonca"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_oxqfo"]
 
@@ -16,7 +15,9 @@ script = ExtResource("2_wxosd")
 
 [node name="CameraVert" type="Node3D" parent="Rootcamera"]
 
-[node name="RayCast3D" parent="Rootcamera/CameraVert" instance=ExtResource("3_jonca")]
+[node name="RayCast3D" type="RayCast3D" parent="Rootcamera/CameraVert"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.580869, 0)
+target_position = Vector3(0, 0, -2)
 
 [node name="Camera3D" type="Camera3D" parent="Rootcamera/CameraVert"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)

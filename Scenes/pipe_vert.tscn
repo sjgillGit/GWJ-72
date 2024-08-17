@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjmsff36dk1ft"]
+
+[ext_resource type="Script" path="res://Scripts/pipe_vert.gd" id="1_ocmbo"]
+[ext_resource type="Texture2D" uid="uid://do450eumqhvwt" path="res://Assets/PipePuzzle/pipe_vert.png" id="1_rlrcv"]
+[ext_resource type="Texture2D" uid="uid://bwrxeh10agw7h" path="res://Assets/PipePuzzle/pipe_vert_active.png" id="2_gdwua"]
+
+[node name="PipeVert" type="Node2D"]
+script = ExtResource("1_ocmbo")
+
+[node name="Off" type="Sprite2D" parent="."]
+texture = ExtResource("1_rlrcv")
+
+[node name="On" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_gdwua")

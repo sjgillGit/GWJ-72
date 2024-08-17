@@ -1,6 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://chlqm32ygjaun"]
+[gd_scene load_steps=8 format=3 uid="uid://chlqm32ygjaun"]
 
 [ext_resource type="PackedScene" uid="uid://bsn01rtw5uxs1" path="res://Main/Player/Player.tscn" id="1_w3tok"]
+[ext_resource type="PackedScene" uid="uid://c25j2v5vc1juo" path="res://Assets/BasePlayArea/Trash can.glb" id="2_upbma"]
+[ext_resource type="PackedScene" uid="uid://bvb3a0gsdrxfd" path="res://Item.tscn" id="3_knw2i"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_lqo7k"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -33,3 +35,9 @@ material = SubResource("StandardMaterial3D_38uyf")
 
 [node name="Node3D" parent="." instance=ExtResource("1_w3tok")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -1)
+
+[node name="Trash can" parent="." instance=ExtResource("2_upbma")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.48337, -0.801416, -5.99382)
+
+[node name="Item" parent="." instance=ExtResource("3_knw2i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.782385, -0.477122, -3.32844)

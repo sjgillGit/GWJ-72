@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://bsn01rtw5uxs1"]
+
+[ext_resource type="Script" path="res://Scripts/Player/CharacterBody3D.gd" id="1_li4c4"]
+[ext_resource type="Script" path="res://Scripts/Player/Rootcamera.gd" id="2_wxosd"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_oxqfo"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_6286r"]
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+script = ExtResource("1_li4c4")
+
+[node name="Rootcamera" type="Node3D" parent="."]
+script = ExtResource("2_wxosd")
+
+[node name="CameraVert" type="Node3D" parent="Rootcamera"]
+
+[node name="Camera3D" type="Camera3D" parent="Rootcamera/CameraVert"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_oxqfo")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+mesh = SubResource("CapsuleMesh_6286r")

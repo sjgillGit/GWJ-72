@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://br1re33pq3yjw"
-path="res://.godot/imported/Speaker.glb-ae9d951124a300a788fe915670ed02ed.scn"
+uid="uid://ciitomasjjki0"
+path="res://.godot/imported/Pipe 1.glb-74b52227f8df13a97a25460bebce1954.scn"
 
 [deps]
 
-source_file="res://Assets/BasePlayArea/Speaker.glb"
-dest_files=["res://.godot/imported/Speaker.glb-ae9d951124a300a788fe915670ed02ed.scn"]
+source_file="res://Assets/Puzzles/Pipes/Pipe 1.glb"
+dest_files=["res://.godot/imported/Pipe 1.glb-74b52227f8df13a97a25460bebce1954.scn"]
 
 [params]
 

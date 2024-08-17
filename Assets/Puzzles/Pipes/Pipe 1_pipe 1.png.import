@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4y4kphvmwrtc"
-path.s3tc="res://.godot/imported/Speaker_speaker.png-60155248d90a74915f5023666a571b70.s3tc.ctex"
+uid="uid://xtwy5t3bcnf1"
+path.s3tc="res://.godot/imported/Pipe 1_pipe 1.png-60aaba867882fe50581b3a18887172d4.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "d7a22754e444f87ed9b3a9cce6b7c0e1"
+"md5": "7c9c584486a9dfa26573b1ba0c03fc73"
 }
 
 [deps]
 
-source_file="res://Assets/BasePlayArea/Speaker_speaker.png"
-dest_files=["res://.godot/imported/Speaker_speaker.png-60155248d90a74915f5023666a571b70.s3tc.ctex"]
+source_file="res://Assets/Puzzles/Pipes/Pipe 1_pipe 1.png"
+dest_files=["res://.godot/imported/Pipe 1_pipe 1.png-60aaba867882fe50581b3a18887172d4.s3tc.ctex"]
 
 [params]
 
